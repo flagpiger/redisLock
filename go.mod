@@ -1,4 +1,4 @@
-module github.com/Spongecaptain/redisLock
+module github.com/flagpiger/redisLock
 
 go 1.16
 

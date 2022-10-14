@@ -154,7 +154,6 @@ func (lock *RedisLock) subscribeLockWithTimeout(d time.Duration) error {
 	case <-time.After(deltaTime):
 		return fmt.Errorf("timeout")
 	}
-
 }
 
 // publishLock publish a message about lock is released

@@ -147,7 +147,7 @@ func (lock *RedisLock) subscribeLockWithTimeout(d time.Duration) error {
 	if err != nil {
 		return err
 	}
-	deltaTime := time.Since(timeNow) - d
+	deltaTime := d - time.Since(timeNow)
 	select {
 	case <-pubSub.Channel():
 		return nil
